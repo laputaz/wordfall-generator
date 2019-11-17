@@ -8,7 +8,7 @@ const setGridStyle = (grid, portionX, portionY, wordColor) => {
   grid.style["gridTemplateColumns"] = "repeat(var(--x-portion), 1fr)";
   grid.style["gridTemplateRows"] = "repeat(var(--y-portion), 1fr)";
   grid.style["overflow"] = "hidden";
-  grid.style["gridAutoFlow"] = "column dense";
+  grid.style["gridAutoFlow"] = "dense";
   grid.style["cursor"] = "pointer";
   let style = document.createElement("style");
   style.innerText = `.wordfall-generator-cell{grid-column-start:span var(--cellsize);grid-row-start:span var(--cellsize);will-change:grid-row-start,grid-column-start}.wordfall-generator-cell::before{content:var(--word);display:block;text-align: center;margin:0 auto;height:100%;transition:all var(--second) cubic-bezier(0.45, 0.05, 0.55, 0.95);will-change:transform,opacity,font-size,color;font-size: calc(var(--cellsize) * 2vmax);color:var(--color);opacity:var(--opacity)}`;
@@ -17,7 +17,7 @@ const setGridStyle = (grid, portionX, portionY, wordColor) => {
 const setCellStyle = (cell, cellSize, word) => {
   cell.className = "wordfall-generator-cell";
   cell.style.setProperty("--word", `"${word}"`);
-  cell.style.setProperty("--opacity", `${Math.random()}`);
+  cell.style.setProperty("--opacity", `${Math.random() + 0.2}`);
   cell.style.setProperty("--second", `${Math.random() * 0.5}s`);
   cell.style.setProperty("--cellsize", cellSize);
   cell.style.setProperty(

@@ -30,8 +30,8 @@ const createWordFall = ({
   gridSize = 30,
   cellSize = [1, 2, 3, 4, 5],
   wordColor = "#eee",
-  //   words = "庄汉祖敏王紫鸾余颖朱珀言万盛光李延钟梦露陈振彬"
-  words = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+     words = "庄汉祖敏王紫鸾余颖朱珀言万盛光李延钟梦露陈振彬"
+  //words = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }) => {
   option = {
     el,

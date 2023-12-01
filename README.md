@@ -1,6 +1,6 @@
 ## wordfall-generator
 
-wordfall-generator
+文字墙生成
 
 
 ## screenshot
